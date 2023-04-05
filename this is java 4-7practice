@@ -1,0 +1,35 @@
+package chapter4;
+
+import java.util.Scanner;
+
+public class ReferenceVariableCompareExample {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		boolean key = true;
+		int money=0;
+		
+		while(key) {
+			System.out.println("-----------------------------");
+			System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
+			System.out.println("-----------------------------");
+			System.out.print("선택>");
+			
+			String num = sc.nextLine();
+			
+			if(num.equals("1")) {
+				System.out.print("예금액:");
+				int num1 = sc.nextInt();
+				money+=num1;
+			}else if(num.equals("2")) {
+				System.out.print("출금액:");
+				int num1 = sc.nextInt();
+				money-=num1;
+			}else if(num.equals("3")){
+				System.out.print("현재 잔고:" + money);
+			}else if(num.equals("4")) {
+				key=false;
+			}
+			System.out.println();
+		}
+	}
+}
