@@ -1,0 +1,22 @@
+package chapter6;
+
+public class Car7Example {
+	public static void main(String[] args) {
+		//객체 생성
+		Car7 myCar7 = new Car7();
+		
+		//잘못된 속도 변경
+		myCar7.setSpeed(-50);
+		System.out.println("현재속도:"+myCar7.getSpeed());
+		
+		//올바른 속도 변경
+		myCar7.setSpeed(60);
+		System.out.println("현재속도:"+myCar7.getSpeed());
+		
+		//멈춤
+		if(!myCar7.isStop()) {
+			myCar7.setStop(true);
+		}
+		System.out.println("현재속도:"+myCar7.getSpeed());
+	}
+}
