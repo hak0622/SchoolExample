@@ -1,0 +1,35 @@
+package chapter6;
+
+public class ThisJavaPractice6 {
+	public static void main(String[] args) {
+	
+		Account a = new Account();
+		
+		a.setBalance(10000);
+		System.out.println("현재잔고:"+a.getBalance());
+		
+		a.setBalance(-100);
+		System.out.println("현재잔고:"+a.getBalance());
+		
+		a.setBalance(2000000);
+		System.out.println("현재잔고:"+a.getBalance());
+		
+		a.setBalance(300000);
+		System.out.println("현재잔고:"+a.getBalance());
+	}
+}
+
+ class Account{
+	static final int MIN_BALANCE=0;
+	static final int MAX_BALANCE=1000000;
+	private int balance =0;
+	
+	public void setBalance(int balance) {
+		if(balance>=MIN_BALANCE &&balance<=MAX_BALANCE) {
+			this.balance=balance;
+		}
+	}
+	public int getBalance() {
+		return balance;
+	}
+}
