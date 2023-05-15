@@ -1,17 +1,12 @@
 package chapter8;
 
-public class RemoteControlEXample {
-	public static void main(String[] args) {
-		RemoteControl rc;
-		
-		rc = new Television();
-		rc.turnOn();
-		rc.setVolume(5);
-		rc.turnOff();
-		
-		rc = new Audio();
-		rc.turnOn();
-		rc.setVolume(5);
-		rc.turnOff();
-	}
+public interface RemoteControl {
+	//상수 필드
+	int MAX_VOLUME = 10;
+	int MIN_VOLUME = 0;
+	
+	//추상 메소드
+	void turnOn();
+	void turnOff();
+	void setVolume(int volume);
 }
