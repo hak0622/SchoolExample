@@ -1,0 +1,12 @@
+package inheritance;
+
+public class MultiInterfacaeImplExample {
+	public static void main(String[] args) {
+  
+		RemoteControl rc = new SmartTelevision1();
+		rc.turnOn();
+		rc.turnOff();
+		Searchable Searchable = new SmartTelevision1();
+		Searchable.search("http://");
+	}
+}
